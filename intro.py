@@ -204,18 +204,18 @@ secondary_colours = ['Purple', 'Orange', 'Green']
 main_colours = primary_colours + secondary_colours
 
 # Try printing main_colours
-print(main_colours)
+print(colours)
 # 15. You can find how many there are by using len(your_list). Try it below
-print(len(main_colours))
+print(len(colours))
 # How many colours are there in main_colours?
-
+print(len(main_colours))
 # GO!
 
 all_colours = colours + main_colours
 
 # How many colours are there in all_colours?
 # Do it here. Try to think what you expect before you run it
-
+print(len(all_colours))
 # GO!
 
 # Did you get what you expected? If not, why not?
@@ -235,7 +235,7 @@ numbers_set = set(numbers)
 colour_set = set(all_colours)
 # How many colours do you expect to be in this time?
 # Do you expect the same or not? Think about it first
-
+print(colour_set)
 # 17. You can use a loop to look over all the items in a list
 
 my_class = ['Sarah', 'Bob', 'Jim', 'Tom', 'Lucy', 'Sophie', 'Liz', 'Ed']
@@ -243,17 +243,20 @@ my_class = ['Sarah', 'Bob', 'Jim', 'Tom', 'Lucy', 'Sophie', 'Liz', 'Ed']
 # Below is a multi-line comment
 # Delete the ''' from before and after to uncomment the block
 
-'''
+
 for student in my_class:
     print(student)
-'''
+
 
 # Add all the names of people in your group to this list
 
 # Remember the difference between append and extend. You can use either.
 
 # Now write a loop to print a number (starting from 1) before each name
-
+number = 1
+for student in my_class:
+    print(str(number)+' student')
+    number=number+1
 # 18. You can split up a string by index
 
 full_name = 'Dominic Adrian Smith'
@@ -265,21 +268,23 @@ last_three = full_name[-3:]  # [17:] and [17:20] also work
 middle = full_name[8:14]
 
 # Try printing these, and try to make a word out of the individual letters
-
+print(first_letter+first_three+' '+middle+' '+last_three+last_letter)
 # 19. You can also split the string on a specific character
 
 my_sentence = "Hello, my name is Fred"
 parts = my_sentence.split(',')
 
-# print(parts)
-# print(type(parts))  # What type is this variable? What can you do with it?
+print(parts)
+print(type(parts))  # What type is this variable? What can you do with it?
 
 # GO!
 
 my_long_sentence = "This is a very very very very very very long sentence"
 
 # Now split the sentence and use this to print out the number of words
-
+sentence = my_long_sentence.split(' ')
+print(sentence)
+print('number of words is: '+str(len(sentence)))
 # GO! (Clues below if you're stuck)
 
 # Clue: Which character do you split on to separate words?
@@ -290,7 +295,7 @@ my_long_sentence = "This is a very very very very very very long sentence"
 
 person = ('Bobby', 26)
 
-# print(person[0] + ' is ' + str(person[1]) + ' years old')
+print(person[0] + ' is ' + str(person[1]) + ' years old')
 
 # GO!
 
@@ -304,19 +309,28 @@ students = [
 ]
 
 # Now write a loop to print each of the students' names and age
+for (name,age) in students:
+    print(name+' '+str(age))
 
 # GO!
 
 # 21. Tuples can be any length. The above examples are 2-tuples.
 
 # Try making a list of students with (name, age, favourite subject and sport)
-
+students1=[
+    ('Dave', 12, 'Programming'),
+    ('Sophia', 13, 'Algorithms')
+    ]
 # Now loop over them printing each one out
-
+for (name,age, subject) in students1:
+    print(name+' '+str(age)+' '+subject)
 # Now pick a number (in the students' age range)
 # Make the loop only print the students older than that number
+for (name,age, subject) in students1:
+    if age<13:
+        print(name+' '+str(age)+' '+subject)
 
-# GO!
+    # GO!
 
 # 22. Another useful data structure is a dictionary
 
@@ -332,15 +346,15 @@ addresses = {
 
 # You access dictionary elements by looking them up with the key:
 
-# print(addresses['Amy'])
+print(addresses['Amy'])
 
 # You can check if a key or value exists in a given dictionary:
 
-# print('David' in addresses)  # [False]
-# print('Daniel' in addresses)  # [True]
-# print('999' in addresses)  # [False]
-# print('999' in addresses.values())  # [True]
-# print(999 in addresses.values())  # [False]
+print('David' in addresses)  # [False]
+print('Daniel' in addresses)  # [True]
+print('999' in addresses)  # [False]
+print('999' in addresses.values())  # [True]
+print(999 in addresses.values())  # [False]
 
 # GO!
 
@@ -350,31 +364,31 @@ addresses = {
 
 # Try changing Amy's phone number to a new number
 
-# addresses['Amy'] = '0115 236 359'
-# print(addresses['Amy'])
+addresses['Amy'] = '0115 236 359'
+print(addresses['Amy'])
 
 # GO!
 
 # Delete Daniel from the dictinary
 
-# print('Daniel' in addresses)  # [True]
-# del addresses['Daniel']
-# print('Daniel' in addresses)  # [False]
+print('Daniel' in addresses)  # [True]
+del addresses['Daniel']
+print('Daniel' in addresses)  # [False]
 
 # GO!
 
 # You can also loop over a dictionary and access its contents:
 
-'''
+
 for name in addresses:
     print(name, addresses[name])
-'''
+
 
 # GO!
 
 # 23. A final challenge using the skills you've learned:
 # What is the sum of all the digits in all the numbers from 1 to 1000?
-
+print(sum(range(1001)))
 # GO!
 
 # Clue: range(10) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
