@@ -20,13 +20,13 @@ print("Hello world")
 message = "Level Two"
 
 # Add a line below to print this variable
-
+print(message)
 # GO!
 
 # 3. The variable above is called a string
 # You can use single or double quotes (but must close them)
 # You can ask Python what type a variable is. Try uncommenting the next line:
-# print(type(message))
+print(type(message))
 # GO!
 
 # 4. Another type of variable is an integer (a whole number)
@@ -36,14 +36,18 @@ c = a + b
 
 # Try printing the value of c below to see the answer
 # GO!
-
+print(c)
 # 5. You can use other operators like subtract (-) and multiply (*)
 # Try some below by replacing the word with the correct operator
 
 # a times b
+a-b
 # b minus a
+b-a
 # 12 times 4
+12-4
 # 103 add 999
+103+999
 
 # GO!
 
@@ -51,29 +55,29 @@ c = a + b
 
 a = 100
 # print(a)  # think - should this be 123 or 100?
-
+print(a)
 c = 50
 # print(c)  # think - should this be 50 or 777?
-
+print(c)
 d = 10 + a - c
 # print(d)  # think - what should this be now?
-
+print(d)
 # GO!
 
 # 7. You can also use '+' to add together two strings
 
 greeting = 'Hi '
-name = ''  # enter your name in this string
+name = 'Amrish'  # enter your name in this string
 
 message = greeting + name
-# print(message)
+print(message)
 
 # GO!
 
 # 8. Try adding a number and a string together and you get an error:
-
-# age =  # enter your age here (as a number)
-
+# "Amrish"+10
+# age =   # enter your age here (as a number)
+age =25
 # print(name + ' is ' + age + ' years old')
 
 # GO!
@@ -84,7 +88,7 @@ message = greeting + name
 
 # 9. We can convert numbers to strings like this:
 
-# print(name + ' is ' + str(age) + ' years old')
+print(name + ' is ' + str(age) + ' years old')
 
 # GO!
 
@@ -92,9 +96,9 @@ message = greeting + name
 
 # Or we could just make sure we enter it as a string:
 
-# age =  # enter your age here, as a string
+age = "25"  # enter your age here, as a string
 
-# print(name + ' is ' + age + ' years old')
+print(name + ' is ' + age + ' years old')
 
 # GO!
 
@@ -109,17 +113,17 @@ raspberry_pi_is_expensive = False
 # We can also compare two variables using ==
 
 bobs_age = 15
-# your_age =  # fill in your age
+your_age = 25  # fill in your age
 
-# print(your_age == bobs_age)  # this prints either True or False
+print(your_age == bobs_age)  # this prints either True or False
 
 # GO!
 
 # 11. We can use less than and greater than too - these are < and >
 
-# bob_is_older = bobs_age > your_age
+bob_is_older = bobs_age > your_age
 
-# print(bob_is_older)  # do you expect True or False?
+print(bob_is_older)  # do you expect True or False?
 
 # GO!
 
@@ -127,17 +131,17 @@ bobs_age = 15
 
 money = 500
 phone_cost = 240
-tablet_cost = 200
+tablet_cost = 260
 
 total_cost = phone_cost + tablet_cost
-can_afford_both = money > total_cost
+can_afford_both = money >= total_cost
 
 if can_afford_both:
     message = "You have enough money for both"
 else:
     message = "You can't afford both devices"
 
-# print(message)  # what do you expect to see here?
+print(message)  # what do you expect to see here?
 
 # GO!
 
@@ -159,7 +163,7 @@ if total_cost <= money:
 else:
     message = "You can't afford 3 raspberry pies"
 
-# print(message)  # what do you expect to see here?
+print(message)  # what do you expect to see here?
 
 # GO!
 
@@ -169,7 +173,7 @@ colours = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 
 # You can check whether a colour is in the list
 
-# print('Black' in colours)  # Prints True or False
+print('Black' in colours)  # Prints True or False
 
 # GO!
 
@@ -178,7 +182,7 @@ colours = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 colours.append('Black')
 colours.append('White')
 
-# print('Black' in colours)  # Should this be different now?
+print('Black' in colours)  # Should this be different now?
 
 # GO!
 
@@ -189,7 +193,7 @@ more_colours = ['Gray', 'Navy', 'Pink']
 colours.extend(more_colours)
 
 # Try printing the list to see what's in it
-
+print(colours)
 # GO!
 
 # 14. You can add two lists together in to a new list using +
@@ -200,9 +204,9 @@ secondary_colours = ['Purple', 'Orange', 'Green']
 main_colours = primary_colours + secondary_colours
 
 # Try printing main_colours
-
+print(main_colours)
 # 15. You can find how many there are by using len(your_list). Try it below
-
+print(len(main_colours))
 # How many colours are there in main_colours?
 
 # GO!
